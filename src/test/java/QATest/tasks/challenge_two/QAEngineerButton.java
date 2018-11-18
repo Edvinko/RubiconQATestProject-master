@@ -1,4 +1,4 @@
-package QATest.tasks;
+package QATest.tasks.challenge_two;
 
 import QATest.ui.Elements;
 import net.serenitybdd.screenplay.Actor;
@@ -8,16 +8,14 @@ import net.thucydides.core.annotations.Step;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class ExampleButton implements Task {
-
-    @Step("User clicks on the example button")
+public class QAEngineerButton implements Task {
+    @Step("User click on QAEngineers button")
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(Elements.EXAMPLE_BUTTON)
+                Click.on(Elements.QAENGINEERS_BUTTON)
         );
     }
-
-    public static ExampleButton click() {
-        return instrumented(ExampleButton.class);
+    public static QAEngineerButton click() {
+        return instrumented(QAEngineerButton.class);
     }
 }

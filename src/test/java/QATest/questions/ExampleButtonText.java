@@ -1,6 +1,6 @@
 package QATest.questions;
 
-import QATest.ui.Buttons;
+import QATest.ui.Elements;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.annotations.Subject;
@@ -10,7 +10,7 @@ import net.serenitybdd.screenplay.questions.Text;
 public class ExampleButtonText implements Question<String> {
     @Override
     public String answeredBy(Actor actor) {
-        return Text.of(Buttons.EXAMPLE_BUTTON).viewedBy(actor).asString();
+        return Text.of(Elements.EXAMPLE_BUTTON).viewedBy(actor).asString();
 
 //        or:
 //        return BrowseTheWeb.as(actor).find(By.id("ebtn")).getText();
